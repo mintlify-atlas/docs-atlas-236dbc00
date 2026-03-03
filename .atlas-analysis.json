@@ -1,0 +1,128 @@
+{
+  "projectType": "infrastructure",
+  "projectName": "RaidHub Services",
+  "projectDescription": "Microservices architecture for Destiny 2 raid completion data collection, processing, and analysis",
+  "theme": "aspen",
+  "primaryColor": "#4A90E2",
+  "lightColor": "#7AB8FF",
+  "darkColor": "#2D5A8C",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "architecture"
+            ]
+          },
+          {
+            "group": "Services",
+            "pages": [
+              "services/atlas",
+              "services/zeus",
+              "services/hermes"
+            ]
+          },
+          {
+            "group": "Queue Workers",
+            "pages": [
+              "queue-workers/overview",
+              "queue-workers/instance-store",
+              "queue-workers/player-crawl",
+              "queue-workers/activity-history",
+              "queue-workers/character-fill",
+              "queue-workers/clan-crawl",
+              "queue-workers/pgcr-blocked-retry",
+              "queue-workers/instance-cheat-check"
+            ]
+          },
+          {
+            "group": "Infrastructure",
+            "pages": [
+              "infrastructure/database",
+              "infrastructure/messaging",
+              "infrastructure/monitoring"
+            ]
+          },
+          {
+            "group": "Tools",
+            "pages": [
+              "tools/overview",
+              "tools/process-missed-pgcrs",
+              "tools/manifest-downloader",
+              "tools/leaderboard-clan-crawl",
+              "tools/cheat-detection",
+              "tools/refresh-view"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Deployment",
+        "groups": [
+          {
+            "group": "Setup",
+            "pages": [
+              "deployment/prerequisites",
+              "deployment/configuration",
+              "deployment/docker-compose"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "deployment/database-migrations",
+              "deployment/scheduled-tasks",
+              "deployment/monitoring"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Development Guide",
+            "pages": [
+              "development/setup",
+              "development/tilt",
+              "development/logging",
+              "development/contributing"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/services",
+              "api/queue-messages",
+              "api/database-schemas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Intelligent PGCR crawler with adaptive scaling (Atlas)",
+    "Bungie API reverse proxy with IPv6 load balancing (Zeus)",
+    "Self-scaling queue worker manager (Hermes)",
+    "Multi-database storage (PostgreSQL + ClickHouse)",
+    "Comprehensive cheat detection system",
+    "Event-driven message queue architecture",
+    "Docker-based infrastructure orchestration",
+    "Prometheus metrics and monitoring"
+  ],
+  "publicApiSurface": [
+    "Atlas - PGCR Crawler Service (port 8080)",
+    "Zeus - Bungie API Proxy (port 7777)",
+    "Hermes - Queue Worker Manager (port 8081)",
+    "RabbitMQ Message Queues (port 5672)",
+    "PostgreSQL Database (port 5432)",
+    "ClickHouse Analytics (port 9000/8123)",
+    "Prometheus Metrics (port 9090)"
+  ]
+}
